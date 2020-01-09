@@ -14,9 +14,9 @@ docker pull notha99y/pytesseract
 
 # To run
 ```bash
-docker run -it --volume <path to your script>:/workspace <image name>
+docker run -it --volume <path to your script>:/workspace  -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix <image name>
 ```
-This would allow you to "tty" inside the container.
+This would allow you to "tty" inside the container, with the ability to show the display
 ```bash
 cd workspace
 python main.py -f <path to video file>
