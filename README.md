@@ -13,4 +13,11 @@ docker pull notha99y/pytesseract
 ```
 
 # To run
-TODO
+```bash
+docker run -it --volume <path to your script>:/workspace <image name>
+```
+This would allow you to "tty" inside the container.
+```bash
+cd workspace
+python main.py -f <path to video file>
+```
